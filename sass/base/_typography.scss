@@ -1,0 +1,73 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: $color-gray;
+}
+
+.heading-primeary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+
+  &-main {
+    display: block;
+    font-size: 8rem;
+    font-weight: 500;
+    letter-spacing: 3.5rem;
+    animation-name: moveinleft;
+    animation-duration: 2s;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 6rem;
+    }
+  }
+  &-sub {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 20px;
+    animation-name: moveinright;
+    animation-duration: 2s;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
+.heading-secondry {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin: auto 0;
+  transition: all 0.3s;
+  letter-spacing: 0.2rem;
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+  &:hover {
+    transform: skewY(3deg) scale(1.1) skewX(5deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+.heading-3 {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paraghrap {
+  font-size: $default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
